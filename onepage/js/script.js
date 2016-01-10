@@ -339,7 +339,7 @@ $(document).ready(function() {
 	//===================================================================================
 	var theday = new Date(2016, 11-1, 19, 20, 0, 0);
 		
-	$('#date-countdown').countdown({until: theday, format: 'DHMS', 
+	$('#date-countdown').countdown({until: theday, format: 'ODHMS', 
 		labels: ['Anos', 'Meses', 'Semanas', 'Dias', 'Horas', 'Minutos', 'Segundos'],
 		labels1: ['Ano', 'Mese', 'Semana', 'Dia', 'Hora', 'Minuto', 'Segundo']});
 		 
