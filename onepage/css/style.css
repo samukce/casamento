@@ -316,7 +316,7 @@ img.with-border{
 
 #nav-bar{
 	position:relative;
-	height:145px;
+	height:85px;
 	width:100%;
 	z-index:1000;
 	
@@ -357,7 +357,7 @@ img.with-border{
 
 #nav-bar.top-bar.stick-it{
 	position:fixed;
-	height:145px; 
+	height:85px; 
 	width:100%;
 	background-color:#FFF;
 	z-index:1500;
@@ -375,12 +375,12 @@ img.with-border{
 #nav-bar.bottom-bar.outside{
 	position:absolute;
 	/*background-color:transparent;*/
-	bottom:-145px;
+	bottom:-85px;
 }
 
 #nav-bar.bottom-bar.stick-it{
 	position:fixed;
-	height:145px; 
+	height:85px; 
 	width:100%;
 	background-color:#FFF;
 	z-index:1500;
@@ -420,7 +420,7 @@ img.with-border{
 #nav-menu{	
 	list-style-type:none; 
 	margin:0; 
-	padding:45px 0 0 0;
+	padding:15px 0 0 0;
 	font-family: 'Oswald', sans-serif;
 	font-size:13px;
 	z-index:1000;
