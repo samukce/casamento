@@ -34,6 +34,7 @@
 
     <!-- Theme CSS -->
     <link href="onepage/css/style.css" rel="stylesheet" media="screen">
+    <link href="onepage/checkbox/style.css" rel="stylesheet" media="screen">
 
     <!-- Skin CSS -->
     <!-- <link href="css/skin/light-teal/light-teal.css" rel="stylesheet" media="screen"> -->
@@ -2409,10 +2410,23 @@
                             </div>
                             <div id="events" class="form-group">
                                 <label for="inputevents">*EU IREI PARA</label>
-                                <select multiple id="inputevents" class="form-control ajax-input" data-required="Please Select Events" data-output-label="Output Events">
- 									<option>Cerimônia</option>
-  									<option>Recepção</option>
-								</select>
+                                <div class="checkbox">
+                                    <div class="col-md-3">
+                                        <input id="cerimonia" type="checkbox" name="cerimonia" class="css-checkbox" />
+                                        <label for="cerimonia" class="css-label">
+                                         Cerimônia
+                                    </label>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <input id="recepcao" type="checkbox" name="recepcao" class="css-checkbox" />
+                                        <label for="recepcao" class="css-label">
+                                         Recepção
+                                    </label>
+                                    </div>
+                                </div>
+
+
                             </div>
                         </div>
                         <div class="col-md-6">
