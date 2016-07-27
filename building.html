@@ -2735,7 +2735,7 @@
                         <!-- Show Message -->
                     </div>
 
-                    <form method="post" action="http://demo.dethemes.com/forever/versions/onepage/rsvp.php" id="rsvpform">
+                    <form target="_self" onsubmit="" action="javascript: postContactToGoogle()">
                         <div class="col-md-6">
                             <div id="fullname" class="form-group">
                                 <label for="inputname">*NOME(S)</label>
@@ -2749,15 +2749,15 @@
                                 <label for="inputevents">*EU IREI PARA</label>
                                 <div class="checkbox">
                                     <div class="col-md-3">
-                                        <input id="cerimonia" type="checkbox" name="cerimonia" class="css-checkbox" />
-                                        <label for="cerimonia" class="css-label">
+                                        <input id="checkcerimonia" type="checkbox" name="cerimonia" class="css-checkbox" />
+                                        <label for="checkcerimonia" class="css-label">
                                          Cerimônia
                                     </label>
                                     </div>
 
                                     <div class="col-md-3">
-                                        <input id="recepcao" type="checkbox" name="recepcao" class="css-checkbox" />
-                                        <label for="recepcao" class="css-label">
+                                        <input id="checkrecepcao" type="checkbox" name="recepcao" class="css-checkbox" />
+                                        <label for="checkrecepcao" class="css-label">
                                          Recepção
                                     </label>
                                     </div>
@@ -2768,7 +2768,7 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="inputmessage">DEIXE SUA MENSAGEM</label>
+                                <label for="inputmessage">DEIXE UMA MENSAGEM PARA NÓS</label>
                                 <textarea id="inputmessage" class="form-control ajax-input" rows="14" data-output-label="Output Message"></textarea>
                             </div>
                         </div>
@@ -2881,6 +2881,61 @@
     <!-- Custom Additional Script -->
     <script type="text/javascript" src="onepage/js/main-slider-fade.js"></script>
 
+
+    <script type="text/javascript">
+        function clearFields() {
+            $('#inputname').val("");
+            $('#inputemail').val("");
+            $('#inputmessage').val("");
+        }
+
+        function postContactToGoogle() {
+
+            var submit_value = $('input[type="submit"]#submitButton').val();
+            $('input[type="submit"]#submitButton').prop('disabled', true);
+            $('input[type="submit"]#submitButton').val('ENVIANDO ...');
+
+            var name = $('#inputname').val();
+            var email = $('#inputemail').val();
+
+            var vaiCerimonia = "";
+            if (document.getElementById('checkcerimonia').checked)
+                vaiCerimonia = "Cerim%C3%B4nia";
+
+            var vaiRecepcao = ""
+            if (document.getElementById('checkrecepcao').checked)
+                vaiRecepcao += "Recep%C3%A7%C3%A3o";
+
+            var mensagem = $('#inputmessage').val();
+
+            var strData = "entry.782450156=" + name +
+                "&entry.2094930462=" + email +
+                "&entry.2000344243=" + vaiCerimonia +
+                "&entry.2000344243=" + vaiRecepcao +
+                "&entry.930181693=" + mensagem;
+
+            $.ajax({
+                url: "https://docs.google.com/forms/d/e/1FAIpQLSenDWiWrSw0G2F8sOEbgsXyBcEKbRRl61VkkjBUjqGg6mqMCg/formResponse",
+                data: strData,
+                type: "POST",
+                dataType: "application/x-www-form-urlencoded",
+                statusCode: {
+                    0: function() {
+
+                        clearFields();
+
+                        $('input[type="submit"]#submitButton').val('MUITO OBRIGADO!');
+                    },
+                    200: function() {
+                        clearFields();
+
+                        $('input[type="submit"]#submitButton').val('MUITO OBRIGADO!');
+                    }
+                }
+            });
+
+        }
+    </script>
 </body>
 
 </html>
