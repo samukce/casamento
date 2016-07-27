@@ -1,0 +1,41 @@
+<form id="callus" target="_self" onsubmit="" action="javascript: postContactToGoogle()">
+
+
+    <input id="nome" type="text" name="nome">
+
+    <input type="submit" id="submitButton" name="submitButton" class="button medium reverse" value="ENVIAR">
+</form>
+
+
+<script src="onepage/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript">
+    function validateEmail(email) {
+        var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(email);
+    }
+
+    function postContactToGoogle() {
+        var name = $('#nome').val();
+
+        $.ajax({
+            url: "https://docs.google.com/forms/d/e/1FAIpQLSenDWiWrSw0G2F8sOEbgsXyBcEKbRRl61VkkjBUjqGg6mqMCg/formResponse",
+            data: {
+                "entry.1": name
+            },
+            type: "POST",
+            dataType: "xml",
+            statusCode: {
+                0: function() {
+
+                    $('#name').val("");
+                    //Success message
+                },
+                200: function() {
+                    $('#name').val("");
+                    //Success Message
+                }
+            }
+        });
+
+    }
+</script>
