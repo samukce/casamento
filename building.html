@@ -2319,8 +2319,8 @@
 
                             <p>
                                 Caso queiram nos presentear, com a finalidade de facilitar e direcionar escolha dos presentes de acordo com o que precisamos, criamos listas em duas lojas, Etna (também disponível online, <a href="https://www.etna.com.br/etna/lista-de-presentes-inicio"
-                                    target="_blank">clique aqui</a>) e Freitas Casa e Cozinha. Colocamos aqui também outras sugestões que não estarão nas listas, mas não se prendam a isso, as listas são apenas sugestões, fiquem à vontade. Nossa casa não
-                                tem nadinha, então presentes são muito bem vindos!
+                                    target="_blank">clique aqui</a>) e Freitas Casa e Cozinha. Colocamos aqui também outras sugestões que não estarão nas listas, mas não se prendam a isso, as listas são apenas sugestões, fiquem à vontade. Nossa casa não tem
+                                nadinha, então presentes são muito bem vindos!
                             </p>
 
 
@@ -2893,27 +2893,27 @@
             var name = $('#inputname').val();
             var email = $('#inputemail').val();
 
-            var vaiCerimonia ="";
+            var vaiCerimonia = "";
             if (document.getElementById('checkcerimonia').checked)
-                vaiCerimonia ="Cerim%C3%B4nia";
+                vaiCerimonia = "Cerim%C3%B4nia";
 
-            var vaiRecepcao =""
+            var vaiRecepcao = ""
             if (document.getElementById('checkrecepcao').checked)
-                vaiRecepcao +="Recep%C3%A7%C3%A3o";
+                vaiRecepcao += "Recep%C3%A7%C3%A3o";
 
             var mensagem = $('#inputmessage').val();
 
-            var strData ="entry.782450156=" + name +
-               " &entry.2094930462=" + email +
-               " &entry.2000344243=" + vaiCerimonia +
-               " &entry.2000344243=" + vaiRecepcao +
-               " &entry.930181693=" + mensagem;
+            var strData = "entry.782450156=" + name +
+                "&entry.2094930462=" + email +
+                "&entry.2000344243=" + vaiCerimonia +
+                "&entry.2000344243=" + vaiRecepcao +
+                "&entry.930181693=" + mensagem;
 
             $.ajax({
-                url:" https://docs.google.com/forms/d/e/1FAIpQLSenDWiWrSw0G2F8sOEbgsXyBcEKbRRl61VkkjBUjqGg6mqMCg/formResponse",
+                url: "https://docs.google.com/forms/d/e/1FAIpQLSenDWiWrSw0G2F8sOEbgsXyBcEKbRRl61VkkjBUjqGg6mqMCg/formResponse",
                 data: strData,
-                type:"POST",
-                dataType:"application/x-www-form-urlencoded",
+                type: "POST",
+                dataType: "application/x-www-form-urlencoded",
                 statusCode: {
                     0: function() {
 
