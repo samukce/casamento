@@ -1,0 +1,44 @@
+<form id="callus" target="_self" onsubmit="" action="javascript: postContactToGoogle()">
+
+
+    <input id="nome" type="text" name="nome">
+
+    <input type="submit" id="submitButton" name="submitButton" class="button medium reverse" value="ENVIAR">
+</form>
+
+
+<script src="onepage/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript">
+    function postContactToGoogle() {
+        var name = $('#nome').val();
+        var email = "email@meu.com";
+        var cerimonia = "Cerimonia";
+        var recepcao = "Recepcao";
+        var mensagem = "Mensagem";
+
+        $.ajax({
+            url: "https://docs.google.com/forms/d/e/1FAIpQLSenDWiWrSw0G2F8sOEbgsXyBcEKbRRl61VkkjBUjqGg6mqMCg/formResponse",
+            data: {
+                "entry.782450156": name,
+                "entry.2094930462": email,
+                "entry.2000344243": cerimonia,
+                //"entry.2000344243": recepcao,
+                "entry.930181693": mensagem
+            },
+            type: "POST",
+            dataType: "xml",
+            statusCode: {
+                0: function() {
+
+                    $('#name').val("");
+                    //Success message
+                },
+                200: function() {
+                    $('#name').val("");
+                    //Success Message
+                }
+            }
+        });
+
+    }
+</script>
