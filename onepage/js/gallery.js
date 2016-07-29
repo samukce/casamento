@@ -51,11 +51,11 @@ $(document).ready(function() {
                 sectionId.prepend(text.replace(/{name}/g, photo));
                 completedCall++;
 
-                console.log('Carregando ' + photo);
+                //console.log('Carregando ' + photo);
 
                 if (countPhotoCallToLoad == completedCall) {
                     configureGallery();
-                    console.log('Configurando..');
+                    //console.log('Configurando..');
                 }
             },
             error: function(err) {
@@ -64,7 +64,7 @@ $(document).ready(function() {
         });
     }
 
-    console.log('starting.....');
+    //console.log('starting.....');
 
     loadPhoto($('#owl-gallery'), 'DSC_0031');
     loadPhoto($('#owl-gallery'), 'DSC_0046');
@@ -99,5 +99,5 @@ $(document).ready(function() {
     loadPhoto($('#owl-gallery'), 'DSC_9961');
     loadPhoto($('#owl-gallery'), 'DSC_9971');
 
-    console.log('configured...' + countPhotoCallToLoad);
+    //console.log('configured...' + countPhotoCallToLoad);
 });
