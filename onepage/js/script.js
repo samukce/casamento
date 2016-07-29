@@ -375,19 +375,6 @@ $(document).ready(function() {
         }
     }
 
-    // 10.2 OWL CAROUSEL - MORE EVENTS (ONEPAGE)
-    //------------------------------------------------------------------------------
-    if ($("#owl-gallery").length) {
-        $("#owl-gallery").owlCarousel({
-            items: 1
-        });
-
-        if (device.tablet() || device.mobile()) {
-            var owl_events = $("#owl-gallery").data('owlCarousel');
-            owl_events.stop()
-        }
-    }
-
     // 10.3 OWL CAROUSEL - REGISTRY LOGO (ONEPAGE)
     //------------------------------------------------------------------------------
     if ($("#registry-logo").length) {
