@@ -463,28 +463,6 @@ $(document).ready(function() {
         },
     });
 
-    // 13.2 Magnific Zoom Gallery
-    //----------------------------------------------------------------------------------	
-    $('.magnific-zoom-gallery').magnificPopup({
-        type: 'image',
-        image: {
-            // options for image content type
-            titleSrc: 'title'
-        },
-        gallery: {
-            enabled: true
-        },
-        //fixedContentPos:true,
-        callbacks: {
-            open: function() {
-                // Will fire when this exact popup is opened
-            },
-            afterClose: function() {
-                // Will fire when popup is closed
-            }
-        },
-    });
-
     // MAGNIFIC AJAX
     //==================================================================================
     $('.magnific-ajax').magnificPopup({
