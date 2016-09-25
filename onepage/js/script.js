@@ -331,9 +331,9 @@ $(document).ready(function() {
 
     $('#date-countdown').countdown({
         until: theday,
-        format: 'ODHMS',
+        format: 'DHMS',
         labels: ['Anos', 'Meses', 'Semanas', 'Dias', 'Horas', 'Minutos', 'Segundos'],
-        labels1: ['Ano', 'Mese', 'Semana', 'Dia', 'Hora', 'Minuto', 'Segundo']
+        labels1: ['Ano', 'Mês', 'Semana', 'Dia', 'Hora', 'Minuto', 'Segundo']
     });
 
     // 08. MOBILE MENU
