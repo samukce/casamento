@@ -228,8 +228,8 @@ $(document).ready(function() {
     loadPhoto($('#gallery-chabar'), '2-chabar', 'IMG-20160822-WA0016.jpg');
 
 
-    
-    
+
+
     loadPhoto($('#gallery-chabar'), '1-chabar', 'IMG_0972.jpg');
     loadPhoto($('#gallery-chabar'), '1-chabar', 'IMG_0974.jpg');
     loadPhoto($('#gallery-chabar'), '1-chabar', 'IMG_1019.jpg');
@@ -247,10 +247,10 @@ $(document).ready(function() {
     loadPhoto($('#gallery-chabar'), '1-chabar', 'IMG-20160811-WA0025.jpg');
     loadPhoto($('#gallery-chabar'), '1-chabar', 'IMG-20160811-WA0028.jpg');
     loadPhoto($('#gallery-chabar'), '1-chabar', 'IMG-20160811-WA0033.jpg');
-    loadPhoto($('#gallery-chabar'), '1-chabar', '_MG_1202.jpg');
-    loadPhoto($('#gallery-chabar'), '1-chabar', '_MG_1204.jpg');
-    loadPhoto($('#gallery-chabar'), '1-chabar', '_MG_1205.jpg');
-    loadPhoto($('#gallery-chabar'), '1-chabar', '_MG_1206.jpg');
+    loadPhoto($('#gallery-chabar'), '1-chabar', 'IMG_1202.jpg');
+    loadPhoto($('#gallery-chabar'), '1-chabar', 'IMG_1204.jpg');
+    loadPhoto($('#gallery-chabar'), '1-chabar', 'IMG_1205.jpg');
+    loadPhoto($('#gallery-chabar'), '1-chabar', 'IMG_1206.jpg');
 
 
 
